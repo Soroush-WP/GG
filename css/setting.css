@@ -1,0 +1,38 @@
+body {
+  font-family: 'Vazir', sans-serif;
+  background: #121212;
+}
+
+.settings-card {
+  background: #1f1f1f;
+  color: #eee;
+  max-width: 500px;
+  margin: auto;
+}
+
+form-label, .form-check-label, .btn, a {
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.settings-card:hover {
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.btn-outline-danger:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+a.btn-light {
+  background: #ddd;
+  color: #000;
+}
+a.btn-light:hover {
+  background: #fff;
+}
+
+@media (max-width: 576px) {
+  .settings-card {
+    padding: 1rem;
+  }
+}

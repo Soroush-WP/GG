@@ -1,0 +1,247 @@
+/* فونت وزیر */
+body {
+  font-family: 'Vazir', Tahoma, sans-serif !important;
+  background: linear-gradient(135deg, #121212, #1f1f1f);
+  color: #ddd;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+/* استایل های header */
+header h1 {
+  color: #ffc107;
+  text-shadow: 0 0 6px #ffc107aa;
+}
+
+#high-score {
+  color: #ffdd57;
+  text-shadow: 0 0 5px #ffdd57bb;
+}
+
+#reset-score {
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#reset-score:hover {
+  background-color: #ffbb33;
+  color: #222;
+  box-shadow: 0 0 8px #ffbb33cc;
+}
+
+/* بخش تنظیمات */
+.game-settings {
+  max-width: 500px;
+  margin-inline: auto;
+  background-color: #282828cc;
+  border-radius: 15px;
+  box-shadow: 0 0 18px #ffaa0088;
+  backdrop-filter: blur(6px);
+  border: 1px solid #ffb300aa;
+  transition: box-shadow 0.4s ease;
+}
+
+.game-settings:hover {
+  box-shadow: 0 0 30px #ffbb0066;
+}
+
+/* فرم‌ها */
+input.form-control {
+  background-color: #222;
+  border: 2px solid #444;
+  color: #eee;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 8px #ffc107aa;
+  outline: none;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* دکمه‌ها */
+button.btn-warning {
+  background-color: #ffb300;
+  border: none;
+  box-shadow: 0 5px 12px #ffb300cc;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button.btn-warning:hover,
+button.btn-warning:focus {
+  background-color: #ffca28;
+  box-shadow: 0 0 20px #ffca28cc;
+  outline: none;
+}
+
+button.btn-success {
+  background-color: #4caf50;
+  border: none;
+  box-shadow: 0 5px 12px #4caf5088;
+  border-radius: 12px;
+  user-select: none;
+}
+
+button.btn-success:hover,
+button.btn-success:focus {
+  background-color: #66bb6a;
+  box-shadow: 0 0 20px #66bb6acc;
+  outline: none;
+}
+
+button.btn-outline-danger {
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button.btn-outline-danger:hover {
+  background-color: #e5393555;
+  border-color: #e53935;
+  color: #e53935;
+  box-shadow: 0 0 10px #e5393555;
+  outline: none;
+}
+
+/* بخش بازی */
+.game-play {
+  max-width: 500px;
+  margin-inline: auto;
+  background-color: #282828cc;
+  border-radius: 15px;
+  box-shadow: 0 0 18px #4caf5088;
+  backdrop-filter: blur(6px);
+  border: 1px solid #4caf5088;
+  transition: box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-play:hover {
+  box-shadow: 0 0 30px #66bb6acc;
+}
+
+#guess {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+}
+
+#message {
+  min-height: 2.5rem;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+#guesses-list {
+  background-color: #1f1f1fdd;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 200px;
+  user-select: none;
+}
+
+#guesses-list li {
+  background-color: #333;
+  color: #ffcc00;
+  font-weight: 600;
+  margin: 4px 0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease;
+}
+
+#guesses-list li:hover {
+  background-color: #555;
+  color: #fff;
+  cursor: default;
+}
+
+/* پیام‌ها */
+.message-success {
+  color: #4caf50 !important;
+  font-weight: 700;
+}
+
+.message-error {
+  color: #f44336 !important;
+  font-weight: 700;
+}
+
+.message-warning {
+  color: #ffb300 !important;
+  font-weight: 700;
+}
+
+/* پنهان کردن */
+.d-none {
+  display: none !important;
+}
+
+/* ریسپانسیو */
+@media (max-width: 576px) {
+  main > section {
+    padding: 1.5rem 1rem;
+  }
+
+  #guess {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+/* تم روشن */
+body.theme-light {
+  background-color: #f0f0f0 !important;
+  color: #333 !important;
+}
+
+body.theme-light button {
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* تم ستاره‌ای */
+body.theme-stars {
+  background: radial-gradient(circle at center, #0a1f44, #000a1f) !important;
+  color: #e0e0ff !important;
+}
+
+body.theme-stars button {
+  border-radius: 20px;
+  font-weight: 800;
+  box-shadow: 0 0 15px #66aaff;
+}
+
+/* تم آسمانی */
+body.theme-sky {
+  background: linear-gradient(135deg, #00c6ff, #0072ff) !important;
+  color: #fff !important;
+}
+
+body.theme-sky button {
+  border-radius: 12px;
+  font-weight: 900;
+  box-shadow: 0 0 20px #00d4ff;
+}
+
+/* پیام‌ها */
+.message-success {
+  color: #4caf50;
+}
+.message-error {
+  color: #f44336;
+}
+.message-warning {
+  color: #ff9800;
+}

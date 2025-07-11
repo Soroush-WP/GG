@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بازی حدس عدد - نسخه خفن</title>
+
+  <!-- بوت‌استرپ RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+  <!-- فونت وزیر -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" />
+
+  <!-- استایل بازی -->
+  <link rel="stylesheet" href="css/Game.css" />
+
+  <!-- فونت کایرو -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+<!-- فونت تاجوال -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet" />
+
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+  <header class="p-3 mb-3 border-bottom border-secondary d-flex justify-content-between align-items-center">
+    <h1 class="h3 fw-bold">بازی حدس عدد</h1>
+    <div>
+      <span class="fs-5 fw-bold">امتیاز برتر: </span>
+      <span id="high-score" class="fs-4 text-warning fw-bolder">0</span>
+      <button id="reset-score" class="btn btn-outline-warning btn-sm ms-2" title="پاک کردن امتیاز برتر">
+        پاک کردن امتیاز
+      </button>
+    </div>
+  </header>
+
+  <main class="container flex-grow-1 d-flex flex-column justify-content-center">
+
+    <section class="game-settings p-4 rounded bg-secondary bg-opacity-25 shadow-sm">
+      <h2 class="fw-bold mb-3">تنظیمات بازی</h2>
+
+      <div class="row g-3 align-items-center mb-3">
+        <label for="max-number" class="col-sm-4 col-form-label fw-semibold fs-5">حداکثر عدد (1 تا 100):</label>
+        <div class="col-sm-8">
+          <input
+            type="number"
+            id="max-number"
+            class="form-control form-control-lg"
+            min="1" max="100"
+            value="50"
+            required
+            aria-describedby="max-number-help"
+          />
+          <div id="max-number-help" class="form-text text-light">عدد هدف که بازی انتخاب می‌کند.</div>
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center mb-3">
+        <label for="chances" class="col-sm-4 col-form-label fw-semibold fs-5">تعداد شانس (1 تا 10):</label>
+        <div class="col-sm-8">
+          <input
+            type="number"
+            id="chances"
+            class="form-control form-control-lg"
+            min="1" max="10"
+            value="5"
+            required
+            aria-describedby="chances-help"
+          />
+          <div id="chances-help" class="form-text text-light">تعداد دفعاتی که می‌توانید حدس بزنید.</div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center mt-4">
+        <button id="start-game" class="btn btn-lg btn-warning fw-bold px-5 shadow-sm">شروع بازی</button>
+      </div>
+    </section>
+
+    <section class="game-play mt-4 p-4 rounded bg-secondary bg-opacity-25 shadow-sm d-none flex-column">
+      <h2 class="fw-bold mb-3 text-center">بازی در حال اجرا</h2>
+
+      <div class="mb-3">
+        <input
+          type="number"
+          id="guess"
+          class="form-control form-control-lg text-center"
+          placeholder="حدس خود را اینجا وارد کنید"
+          min="1"
+          aria-label="ورود حدس عدد"
+        />
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 mb-3">
+        <button id="submit-guess" class="btn btn-success btn-lg px-4 fw-bold shadow-sm">ثبت حدس</button>
+        <button id="restart-game" class="btn btn-outline-danger btn-lg px-4 fw-bold shadow-sm">شروع مجدد</button>
+      </div>
+
+      <p id="message" class="fs-5 text-center fw-semibold mb-3"></p>
+
+      <ul id="guesses-list" class="list-group list-group-flush rounded overflow-auto" style="max-height: 200px;"></ul>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-3 mt-auto border-top border-secondary text-muted small">
+    طراحی شده با ❤️ توسط سروش
+  </footer>
+
+  <script src="js/Game.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
