@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ماشین حساب خفن</title>
+  <link rel="stylesheet" href="Calculator.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>🧮 ماشین حساب</h1>
+    <a class="back-btn" href="menu.html">بازگشت</a>
+  </header>
+
+  <main class="calculator">
+    <div class="screen" id="screen">0</div>
+    <div class="buttons">
+      <button class="btn" data-action="clear">C</button>
+      <button class="btn" data-action="back">←</button>
+      <button class="btn" data-value="%">%</button>
+      <button class="btn operator" data-value="/">÷</button>
+
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn operator" data-value="*">×</button>
+
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn operator" data-value="-">−</button>
+
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn operator" data-value="+">+</button>
+
+      <button class="btn" data-value="0">0</button>
+      <button class="btn" data-value=".">.</button>
+      <button class="btn equal" data-action="calculate">=</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 ابزار پیشرفته ریاضی</p>
+  </footer>
+
+  <script src="Calculator.js"></script>
+</body>
+</html>

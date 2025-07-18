@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بازی حدس عدد خفن</title>
+  <link rel="stylesheet" href="GG.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <h1>🎯 بازی حدس عدد</h1>
+    <a class="back-btn" href="menu.html">بازگشت</a>
+  </header>
+
+  <main class="game-container">
+    <section class="game-instructions">
+      <p>عدد بین 1 تا 100 رو حدس بزن!</p>
+      <p>تعداد تلاش‌ها: <span id="attempts">0</span></p>
+    </section>
+
+    <section class="game-input">
+      <input type="number" id="guessInput" min="1" max="100" placeholder="عدد وارد کن..." autofocus />
+      <button id="submitBtn" class="btn">حدس بزن</button>
+    </section>
+
+    <section class="game-feedback" id="feedback">
+      <!-- پیام‌ها اینجا می‌آیند -->
+    </section>
+
+    <section class="game-reset">
+      <button id="resetBtn" class="btn secondary">شروع دوباره</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 بازی حدس عدد پیشرفته</p>
+  </footer>
+
+  <script src="GG.js"></script>
+</body>
+</html>

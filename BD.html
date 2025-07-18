@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ابزار تاریخ تولد</title>
+  <link rel="stylesheet" href="BD.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="container">
+    <h1>ابزار  تاریخ تولد</h1>
+    <form id="birthForm" autocomplete="off">
+      <div class="input-group">
+        <label for="day">روز تولد</label>
+        <input type="number" id="day" name="day" min="1" max="31" placeholder="به عدد" required />
+      </div>
+      <div class="input-group">
+        <label for="month">ماه تولد</label>
+        <select id="month" name="month" required>
+          <option value="" disabled selected>انتخاب ماه</option>
+          <option value="1">فروردین</option>
+          <option value="2">اردیبهشت</option>
+          <option value="3">خرداد</option>
+          <option value="4">تیر</option>
+          <option value="5">مرداد</option>
+          <option value="6">شهریور</option>
+          <option value="7">مهر</option>
+          <option value="8">آبان</option>
+          <option value="9">آذر</option>
+          <option value="10">دی</option>
+          <option value="11">بهمن</option>
+          <option value="12">اسفند</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="year">سال تولد (شمسی)</label>
+        <input id="year" name="year" type="number" min="1300" max="1500" placeholder="سال به شمسی" required />
+
+        <small>سال شمسی را وارد کنید</small>
+      </div>
+      <button type="submit" id="calcBtn">محاسبه کن</button>
+    </form>
+
+    <section id="result" class="result" aria-live="polite" hidden>
+      <h2>نتایج</h2>
+      <ul>
+        <li><strong>سن شما:</strong> <span id="age"></span></li>
+        <li><strong>تاریخ تولد شمسی:</strong> <span id="persianDate"></span></li>
+        <li><strong>تاریخ تولد میلادی:</strong> <span id="gregorianDate"></span></li>
+        <li><strong>تاریخ تولد بعدی شما:</strong> <span id="nextBirthday"></span></li>
+        <li><strong>روز هفته تولد:</strong> <span id="birthWeekday"></span></li>
+        <li><strong>توضیحات بامزه:</strong> <span id="funFact"></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="BD.js"></script>
+</body>
+</html>

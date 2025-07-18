@@ -1,0 +1,92 @@
+/* ===== styles.css for index.html ===== */
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: linear-gradient(to bottom right, #eef2ff, #dfe9f3);
+  color: #333;
+}
+
+.header {
+  background: #4c51bf;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px);
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  color: #4c51bf;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+}
+
+.cta-button {
+  background: #4c51bf;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background: #5a67d8;
+}
+
+.footer {
+  background: #2d3748;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

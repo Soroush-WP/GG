@@ -1,0 +1,82 @@
+/* ===== menu.css ===== */
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: linear-gradient(to top left, #e0f7fa, #ffffff);
+  color: #222;
+}
+
+.header {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.back-btn {
+  background: #fff;
+  color: #0077b6;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #caf0f8;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tool-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background: #f1fafe;
+}
+
+.tool-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+
+.tool-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #023e8a;
+  color: white;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}

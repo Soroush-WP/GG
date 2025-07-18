@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #f0f0f3;
+  direction: rtl;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 36px 48px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    inset 0 0 12px rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  transition: box-shadow 0.3s ease;
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+.container:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.45),
+    inset 0 0 16px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #f3f3f3;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  user-select: none;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.input-group {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #d8d8d8;
+  user-select: none;
+  letter-spacing: 0.3px;
+}
+
+input[type="number"],
+select {
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.25),
+    0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 4px;
+  outline-color: transparent;
+  cursor: pointer;
+}
+
+input[type="number"]::placeholder {
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+}
+
+input[type="number"]:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 3px 8px rgba(255,255,255,0.55),
+    0 0 12px #8a77ffaa;
+  outline-color: #8a77ff;
+  color: #f0f0f0;
+}
+
+small {
+  margin-top: 4px;
+  color: #bbb;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+button#calcBtn {
+  flex-basis: 100%;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #8a77ff, #6654f1);
+  border: none;
+  border-radius: 32px;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 1.4px;
+  color: #f7f7f7;
+  cursor: pointer;
+  box-shadow:
+    0 8px 24px #6654f1cc;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+button#calcBtn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+button#calcBtn:hover::before {
+  left: 150%;
+}
+
+button#calcBtn:hover {
+  background: linear-gradient(90deg, #6654f1, #8a77ff);
+  box-shadow:
+    0 10px 30px #8a77ffcc;
+}
+
+.result {
+  margin-top: 36px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 30px 36px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  color: #e8e8f7;
+  line-height: 1.6;
+  font-weight: 600;
+  user-select: text;
+  animation: slideUpFadeIn 0.6s ease forwards;
+}
+
+.result h2 {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+  color: #ececff;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  user-select: none;
+}
+
+.result ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result li {
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+  border-right: 5px solid #8a77ff;
+  padding-right: 12px;
+  text-shadow: 0 0 3px rgba(138,119,255,0.7);
+}
+
+.result strong {
+  color: #cbc9ff;
+  font-weight: 700;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .input-group {
+    flex-basis: 100%;
+  }
+
+  button#calcBtn {
+    font-size: 1.2rem;
+  }
+}
