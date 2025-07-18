@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>برعکس کن 🔁 |💎 متن , عدد </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="Reverse.css"/>
+</head>
+<body>
+
+  <section class="main-wrapper">
+
+    <div class="container-box">
+
+      <h1 class="title"><i class="fas fa-retweet fa-shake"></i> برعکس کن!</h1>
+      <p class="subtitle">هرچی دوست داری بنویس، برعکسشو تحویل بگیر! <i class="fas fa-wand-magic-sparkles"></i></p>
+
+      <div class="input-box">
+        <label for="input1"><i class="fas fa-keyboard"></i> ورودی</label>
+        <div class="input-wrapper">
+          <input type="text" id="input1" placeholder="مثال: 🧷 رامین">
+        </div>
+      </div>
+
+      <div class="btn-wrapper">
+        <button id="Generate1" class="glow-btn">
+          <i class="fas fa-magic"></i> تبدیل کن!
+        </button>
+      </div>
+
+      <div id="custom-loading" class="spinner" style="display: none;">
+        <i class="fas fa-cog fa-spin fa-2x"></i> در حال پردازش...
+      </div>
+
+      <div class="input-box output">
+        <label for="input2"><i class="fas fa-check-circle"></i> خروجی</label>
+        <div class="input-wrapper">
+          <input type="text" id="input2" readonly placeholder="اینجا نتیجه میاد">
+          <button id="copy" class="copy-btn" title="کپی کن"><i class="fas fa-copy"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <script src="Reverse.js"></script>
+</body>
+</html>
